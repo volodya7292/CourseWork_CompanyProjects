@@ -38,13 +38,13 @@ namespace CompanyProjects
             }
 
             Position[] positions = QueryPositions();
-
             positionCB1.Items.AddRange(positions);
             positionCB1.SelectedIndex = 0;
 
             updateTeams();
-            updateEngineers();
             updateTeamLeads();
+            updateProjectManagers();
+            updateCustomers();
 
             using (DbDataReader reader = CreateCommand(conn0, "SELECT id, name FROM position").ExecuteReader())
             {
@@ -68,34 +68,69 @@ namespace CompanyProjects
             return command;
         }
 
-        private void updateEngineers()
+        private void updateTeamUnassignedEngineers()
         {
-            Employee[] engineers = QueryEngineers();
+            if (teamCB1.SelectedIndex != -1)
+            {
+                Employee[] engineers = QueryUnassignedEngineers(((QATeam)teamCB1.SelectedItem).id);
 
-            testerCB1.Items.AddRange(engineers);
-            if (engineers.Length > 0)
-                testerCB1.SelectedIndex = 0;
-            addTesterToTeamB.Enabled = engineers.Length > 0;
+                testerCB1.Items.Clear();
+                testerCB1.Items.AddRange(engineers);
+                if (engineers.Length > 0)
+                    testerCB1.SelectedIndex = 0;
+            }
         }
 
         private void updateTeamLeads()
         {
             Employee[] teamLeads = QueryTeamLeads();
 
+            teamLeadCB1.Items.Clear();
             teamLeadCB1.Items.AddRange(teamLeads);
             if (teamLeads.Length > 0)
                 teamLeadCB1.SelectedIndex = 0;
-            createTeamB.Enabled = teamLeads.Length > 0;
+        }
+
+        private void updateProjectManagers()
+        {
+            Employee[] managers = QueryProjectManagers();
+
+            managerCB3.Items.Clear();
+            managerCB3.Items.AddRange(managers);
+            if (managers.Length > 0)
+                managerCB3.SelectedIndex = 0;
         }
 
         private void updateTeams()
         {
             QATeam[] teams = QueryQATeams();
 
+            teamCB1.Items.Clear();
             teamCB1.Items.AddRange(teams);
             if (teams.Length > 0)
                 teamCB1.SelectedIndex = 0;
+
+            teamCB3.Items.Clear();
+            teamCB3.Items.AddRange(teams);
+            if (teams.Length > 0)
+                teamCB3.SelectedIndex = 0;
         }
+
+        private void updateCustomers()
+        {
+            Customer[] customers = QueryCustomers();
+
+            customerCB3.Items.Clear();
+            customerCB3.Items.AddRange(customers);
+            if (customers.Length > 0)
+                customerCB3.SelectedIndex = 0;
+
+            customerCB4.Items.Clear();
+            customerCB4.Items.AddRange(customers);
+            if (customers.Length > 0)
+                customerCB4.SelectedIndex = 0;
+        }
+
 
         private Position[] QueryPositions()
         {
@@ -103,7 +138,7 @@ namespace CompanyProjects
 
             using (DbDataReader reader = CreateCommand(conn0, "SELECT * FROM position").ExecuteReader())
             {
-                if (reader.HasRows && reader.Read())
+                while (reader.HasRows && reader.Read())
                 {
                     Position position = new Position
                     {
@@ -111,7 +146,6 @@ namespace CompanyProjects
                         name = reader.GetString(reader.GetOrdinal("name"))
                     };
                     positions.Add(position);
-
                 }
             }
 
@@ -247,9 +281,139 @@ namespace CompanyProjects
             return combined;
         }
 
+        private Employee[] QueryUnassignedEngineers(long qa_team_id)
+        {
+            List<Employee> employees = new List<Employee>();
+
+            using (DbDataReader reader = CreateCommand(conn0, "SELECT employee.* FROM employee WHERE " +
+                "(SELECT COUNT(1) FROM qa_team_engineer WHERE qa_team_engineer.qa_engineer = employee.id " +
+                "AND qa_team_engineer.qa_team = " + qa_team_id + ") = 0").ExecuteReader())
+            {
+                while (reader.HasRows && reader.Read())
+                {
+                    Employee employee = new Employee
+                    {
+                        id = reader.GetInt64(reader.GetOrdinal("id")),
+                        name = reader.GetString(reader.GetOrdinal("name")),
+                        phone = reader.GetString(reader.GetOrdinal("phone")),
+                        email = reader.GetString(reader.GetOrdinal("email")),
+                        position = QueryPosition(reader.GetInt64(reader.GetOrdinal("position")))
+                    };
+                    employees.Add(employee);
+                }
+            }
+
+            return employees.ToArray();
+        }
+
+        private Customer[] QueryCustomers()
+        {
+            List<Customer> customers = new List<Customer>();
+
+            using (DbDataReader reader = CreateCommand(conn0, "SELECT * FROM customer").ExecuteReader())
+            {
+                if (reader.HasRows && reader.Read())
+                {
+                    Customer customer = new Customer
+                    {
+                        id = reader.GetInt64(reader.GetOrdinal("id")),
+                        name = reader.GetString(reader.GetOrdinal("name")),
+                        address = reader.GetString(reader.GetOrdinal("address")),
+                        phone = reader.GetString(reader.GetOrdinal("phone")),
+                        email = reader.GetString(reader.GetOrdinal("email")),
+                    };
+                    customers.Add(customer);
+                }
+            }
+
+            return customers.ToArray();
+        }
+
+        private Project[] QueryCustomerProjects(long customer_id)
+        {
+            List<Project> projects = new List<Project>();
+
+            using (DbDataReader reader = CreateCommand(conn0, "SELECT * FROM project WHERE project.customer = " + customer_id).ExecuteReader())
+            {
+                if (reader.HasRows && reader.Read())
+                {
+                    Project project = new Project
+                    {
+                        id = reader.GetInt64(reader.GetOrdinal("id")),
+                        name = reader.GetString(reader.GetOrdinal("name")),
+                        price = reader.GetDecimal(reader.GetOrdinal("price")),
+                        term_start = reader.GetString(reader.GetOrdinal("term_start")),
+                        term_end = reader.GetString(reader.GetOrdinal("term_end")),
+                        manager = QueryEmployee(reader.GetInt64(reader.GetOrdinal("manager"))),
+                        qa_team_id = reader.GetInt64(reader.GetOrdinal("qa_team"))
+                    };
+                    projects.Add(project);
+                }
+            }
+
+            return projects.ToArray();
+        }
+
         private Employee[] QueryProjectManagers()
         {
-            return QueryEmployees(2);
+            return QueryEmployees(3);
+        }
+
+        private void teamCB1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateTeamUnassignedEngineers();
+        }
+
+        private void customerCB4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Project[] projects = QueryCustomerProjects(((Customer)customerCB4.SelectedItem).id);
+
+            foreach (Project project in projects) {
+                ListViewItem item = new ListViewItem(project.name);
+                item.SubItems.Add(project.price.ToString());
+                item.SubItems.Add(project.term_start.ToString());
+                item.SubItems.Add(project.term_end.ToString());
+                item.SubItems.Add(project.manager.name);
+                item.SubItems.Add(project.qa_team_id.ToString());
+                projectsLV4.Items.Add(item);
+            }
+        }
+
+        private void createEmployeeB_Click(object sender, EventArgs e)
+        {
+            string name = nameTB1.Text;
+            string phone = phoneTB1.Text;
+            string email = emailTB1.Text;
+            long position_id = ((Position)positionCB1.SelectedItem).id;
+
+            CreateCommand(conn0, "INSERT INTO employee (name, phone, email, position) VALUES(" +
+                "'" + name + "','" + phone + "','" + email + "'," + position_id + ")").ExecuteNonQuery();
+
+            nameTB1.Clear();
+            phoneTB1.Clear();
+            emailTB1.Clear();
+
+            updateTeamUnassignedEngineers();
+            updateTeamLeads();
+            updateProjectManagers();
+        }
+
+        private void createCustomerB_Click(object sender, EventArgs e)
+        {
+            string name = nameTB2.Text;
+            string address = addressTB2.Text;
+            string phone = phoneTB2.Text;
+            string email = emailTB2.Text;
+
+            CreateCommand(conn0, "INSERT INTO customer (name, address, phone, email) VALUES(" +
+                "'" + name + "','" + address + "','" + phone + "','" + email + "')").ExecuteNonQuery();
+
+            nameTB2.Clear();
+            phoneTB2.Clear();
+            emailTB2.Clear();
+            emailTB2.Clear();
+
+            updateCustomers();
         }
 
         private void createTeamB_Click(object sender, EventArgs e)
@@ -258,12 +422,32 @@ namespace CompanyProjects
             updateTeams();
         }
 
+        private void createProjectB_Click(object sender, EventArgs e)
+        {
+            string name = nameTB3.Text;
+            long customer_id = ((Customer)customerCB3.SelectedItem).id;
+            decimal price = priceN3.Value;
+            string term_start = termStartD3.Value.ToString("yyyy-MM-dd");
+            string term_end = termEndD3.Value.ToString("yyyy-MM-dd");
+            string add_info = addInfoTB3.Text;
+            long manager_id = ((Employee)managerCB3.SelectedItem).id;
+            long qa_team_id = ((QATeam)teamCB3.SelectedItem).id;
+
+            CreateCommand(conn0, "INSERT INTO project (name, customer, price, term_start, term_end, info, manager, qa_team) VALUES(" +
+                "'" + name + "'," + customer_id + "," + price + ",'" + term_start + "','" + term_end + "','" + add_info + "'," + manager_id + "," + qa_team_id + ")").ExecuteNonQuery();
+
+            nameTB3.Clear();
+            priceN3.Value = 1.0M;
+            addInfoTB3.Clear();
+        }
+
         private void addTesterToTeamB_Click(object sender, EventArgs e)
         {
             long team_id = ((QATeam)teamCB1.SelectedItem).id;
             long engineer_id = ((Employee)testerCB1.SelectedItem).id;
 
             CreateCommand(conn0, "INSERT INTO qa_team_engineer (qa_team, qa_engineer) VALUES(" + team_id + "," + engineer_id + ")").ExecuteNonQuery();
+            updateTeamUnassignedEngineers();
         }
     }
 }

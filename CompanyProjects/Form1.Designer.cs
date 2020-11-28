@@ -29,29 +29,26 @@ namespace CompanyProjects
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.emailTB2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.phoneTB2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.addressTB2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nameTB2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.createCustomerB = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.positionCB1 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.emailTB1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.phoneTB1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.nameTB1 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.createEmployeeB = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.teamLeadCB1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,33 +59,54 @@ namespace CompanyProjects
             this.teamCB1 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.addTesterToTeamB = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.managerCB3 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.nameTB3 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.createProjectB = new System.Windows.Forms.Button();
+            this.termStartD3 = new System.Windows.Forms.DateTimePicker();
+            this.teamCB3 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.termEndD3 = new System.Windows.Forms.DateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.addInfoTB3 = new System.Windows.Forms.TextBox();
+            this.priceN3 = new System.Windows.Forms.NumericUpDown();
+            this.customerCB3 = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.projectsLV4 = new System.Windows.Forms.ListView();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.customerCB4 = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.priceN3)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(179, 337);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Створити проект";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.emailTB2);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.phoneTB2);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.addressTB2);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.nameTB2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.createCustomerB);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(270, 12);
             this.groupBox1.Name = "groupBox1";
@@ -97,13 +115,13 @@ namespace CompanyProjects
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Створити замовника";
             // 
-            // textBox4
+            // emailTB2
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(67, 113);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(153, 22);
-            this.textBox4.TabIndex = 8;
+            this.emailTB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.emailTB2.Location = new System.Drawing.Point(67, 113);
+            this.emailTB2.Name = "emailTB2";
+            this.emailTB2.Size = new System.Drawing.Size(153, 22);
+            this.emailTB2.TabIndex = 8;
             // 
             // label8
             // 
@@ -115,13 +133,13 @@ namespace CompanyProjects
             this.label8.TabIndex = 7;
             this.label8.Text = "Email:";
             // 
-            // textBox3
+            // phoneTB2
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(93, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(127, 22);
-            this.textBox3.TabIndex = 6;
+            this.phoneTB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.phoneTB2.Location = new System.Drawing.Point(93, 85);
+            this.phoneTB2.Name = "phoneTB2";
+            this.phoneTB2.Size = new System.Drawing.Size(127, 22);
+            this.phoneTB2.TabIndex = 6;
             // 
             // label7
             // 
@@ -133,13 +151,13 @@ namespace CompanyProjects
             this.label7.TabIndex = 5;
             this.label7.Text = "Телефон:";
             // 
-            // textBox2
+            // addressTB2
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(81, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 22);
-            this.textBox2.TabIndex = 4;
+            this.addressTB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addressTB2.Location = new System.Drawing.Point(81, 57);
+            this.addressTB2.Name = "addressTB2";
+            this.addressTB2.Size = new System.Drawing.Size(139, 22);
+            this.addressTB2.TabIndex = 4;
             // 
             // label6
             // 
@@ -151,13 +169,13 @@ namespace CompanyProjects
             this.label6.TabIndex = 3;
             this.label6.Text = "Адреса:";
             // 
-            // textBox1
+            // nameTB2
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(55, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 22);
-            this.textBox1.TabIndex = 2;
+            this.nameTB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameTB2.Location = new System.Drawing.Point(55, 29);
+            this.nameTB2.Name = "nameTB2";
+            this.nameTB2.Size = new System.Drawing.Size(165, 22);
+            this.nameTB2.TabIndex = 2;
             // 
             // label1
             // 
@@ -169,33 +187,32 @@ namespace CompanyProjects
             this.label1.TabIndex = 1;
             this.label1.Text = "Iм\'я:";
             // 
-            // button1
+            // createCustomerB
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(135, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Створити";
-            this.button1.UseVisualStyleBackColor = true;
+            this.createCustomerB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.createCustomerB.Location = new System.Drawing.Point(135, 141);
+            this.createCustomerB.Name = "createCustomerB";
+            this.createCustomerB.Size = new System.Drawing.Size(85, 23);
+            this.createCustomerB.TabIndex = 0;
+            this.createCustomerB.Text = "Створити";
+            this.createCustomerB.UseVisualStyleBackColor = true;
+            this.createCustomerB.Click += new System.EventHandler(this.createCustomerB_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.positionCB1);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.emailTB1);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.phoneTB1);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.nameTB1);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.createEmployeeB);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(252, 211);
+            this.groupBox2.Size = new System.Drawing.Size(252, 190);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Створити працiвника";
@@ -204,7 +221,7 @@ namespace CompanyProjects
             // 
             this.positionCB1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.positionCB1.FormattingEnabled = true;
-            this.positionCB1.Location = new System.Drawing.Point(82, 141);
+            this.positionCB1.Location = new System.Drawing.Point(82, 113);
             this.positionCB1.Name = "positionCB1";
             this.positionCB1.Size = new System.Drawing.Size(164, 24);
             this.positionCB1.TabIndex = 10;
@@ -213,73 +230,55 @@ namespace CompanyProjects
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(16, 144);
+            this.label13.Location = new System.Drawing.Point(16, 116);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(60, 16);
             this.label13.TabIndex = 9;
             this.label13.Text = "Посада:";
             // 
-            // textBox5
+            // emailTB1
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(67, 113);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(179, 22);
-            this.textBox5.TabIndex = 8;
+            this.emailTB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.emailTB1.Location = new System.Drawing.Point(67, 85);
+            this.emailTB1.Name = "emailTB1";
+            this.emailTB1.Size = new System.Drawing.Size(179, 22);
+            this.emailTB1.TabIndex = 8;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(16, 116);
+            this.label9.Location = new System.Drawing.Point(16, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 16);
             this.label9.TabIndex = 7;
             this.label9.Text = "Email:";
             // 
-            // textBox6
+            // phoneTB1
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(93, 85);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(153, 22);
-            this.textBox6.TabIndex = 6;
+            this.phoneTB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.phoneTB1.Location = new System.Drawing.Point(93, 57);
+            this.phoneTB1.Name = "phoneTB1";
+            this.phoneTB1.Size = new System.Drawing.Size(153, 22);
+            this.phoneTB1.TabIndex = 6;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(16, 88);
+            this.label10.Location = new System.Drawing.Point(16, 60);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 16);
             this.label10.TabIndex = 5;
             this.label10.Text = "Телефон:";
             // 
-            // textBox7
+            // nameTB1
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox7.Location = new System.Drawing.Point(81, 57);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(165, 22);
-            this.textBox7.TabIndex = 4;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(16, 60);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 16);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Адреса:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox8.Location = new System.Drawing.Point(55, 29);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(191, 22);
-            this.textBox8.TabIndex = 2;
+            this.nameTB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameTB1.Location = new System.Drawing.Point(55, 29);
+            this.nameTB1.Name = "nameTB1";
+            this.nameTB1.Size = new System.Drawing.Size(191, 22);
+            this.nameTB1.TabIndex = 2;
             // 
             // label12
             // 
@@ -291,15 +290,16 @@ namespace CompanyProjects
             this.label12.TabIndex = 1;
             this.label12.Text = "Iм\'я:";
             // 
-            // button2
+            // createEmployeeB
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(161, 182);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Створити";
-            this.button2.UseVisualStyleBackColor = true;
+            this.createEmployeeB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.createEmployeeB.Location = new System.Drawing.Point(161, 154);
+            this.createEmployeeB.Name = "createEmployeeB";
+            this.createEmployeeB.Size = new System.Drawing.Size(85, 23);
+            this.createEmployeeB.TabIndex = 0;
+            this.createEmployeeB.Text = "Створити";
+            this.createEmployeeB.UseVisualStyleBackColor = true;
+            this.createEmployeeB.Click += new System.EventHandler(this.createEmployeeB_Click);
             // 
             // groupBox3
             // 
@@ -386,6 +386,7 @@ namespace CompanyProjects
             this.teamCB1.Name = "teamCB1";
             this.teamCB1.Size = new System.Drawing.Size(154, 24);
             this.teamCB1.TabIndex = 10;
+            this.teamCB1.SelectedIndexChanged += new System.EventHandler(this.teamCB1_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -408,16 +409,298 @@ namespace CompanyProjects
             this.addTesterToTeamB.UseVisualStyleBackColor = true;
             this.addTesterToTeamB.Click += new System.EventHandler(this.addTesterToTeamB_Click);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.customerCB3);
+            this.groupBox5.Controls.Add(this.label19);
+            this.groupBox5.Controls.Add(this.priceN3);
+            this.groupBox5.Controls.Add(this.addInfoTB3);
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.termEndD3);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.teamCB3);
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.termStartD3);
+            this.groupBox5.Controls.Add(this.managerCB3);
+            this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Controls.Add(this.nameTB3);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.createProjectB);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox5.Location = new System.Drawing.Point(12, 208);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(297, 330);
+            this.groupBox5.TabIndex = 11;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Створити проект";
+            // 
+            // managerCB3
+            // 
+            this.managerCB3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.managerCB3.FormattingEnabled = true;
+            this.managerCB3.Location = new System.Drawing.Point(101, 227);
+            this.managerCB3.Name = "managerCB3";
+            this.managerCB3.Size = new System.Drawing.Size(183, 24);
+            this.managerCB3.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(16, 230);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 16);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Менеджер:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(16, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Початок:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(16, 90);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(39, 16);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Цiна:";
+            // 
+            // nameTB3
+            // 
+            this.nameTB3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameTB3.Location = new System.Drawing.Point(75, 29);
+            this.nameTB3.Name = "nameTB3";
+            this.nameTB3.Size = new System.Drawing.Size(209, 22);
+            this.nameTB3.TabIndex = 2;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(16, 32);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 16);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Назва:";
+            // 
+            // createProjectB
+            // 
+            this.createProjectB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.createProjectB.Location = new System.Drawing.Point(199, 296);
+            this.createProjectB.Name = "createProjectB";
+            this.createProjectB.Size = new System.Drawing.Size(85, 23);
+            this.createProjectB.TabIndex = 0;
+            this.createProjectB.Text = "Створити";
+            this.createProjectB.UseVisualStyleBackColor = true;
+            this.createProjectB.Click += new System.EventHandler(this.createProjectB_Click);
+            // 
+            // termStartD3
+            // 
+            this.termStartD3.Location = new System.Drawing.Point(127, 115);
+            this.termStartD3.Name = "termStartD3";
+            this.termStartD3.Size = new System.Drawing.Size(157, 22);
+            this.termStartD3.TabIndex = 13;
+            this.termStartD3.Value = new System.DateTime(2020, 11, 28, 0, 0, 0, 0);
+            // 
+            // teamCB3
+            // 
+            this.teamCB3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.teamCB3.FormattingEnabled = true;
+            this.teamCB3.Location = new System.Drawing.Point(112, 257);
+            this.teamCB3.Name = "teamCB3";
+            this.teamCB3.Size = new System.Drawing.Size(172, 24);
+            this.teamCB3.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(16, 260);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 16);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Команда QA:";
+            // 
+            // termEndD3
+            // 
+            this.termEndD3.Location = new System.Drawing.Point(127, 143);
+            this.termEndD3.Name = "termEndD3";
+            this.termEndD3.Size = new System.Drawing.Size(157, 22);
+            this.termEndD3.TabIndex = 17;
+            this.termEndD3.Value = new System.DateTime(2020, 11, 28, 0, 0, 0, 0);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(16, 146);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 16);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Кiнець:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(16, 173);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(72, 16);
+            this.label18.TabIndex = 18;
+            this.label18.Text = "Доп. iнфо:";
+            // 
+            // addInfoTB3
+            // 
+            this.addInfoTB3.Location = new System.Drawing.Point(107, 171);
+            this.addInfoTB3.Multiline = true;
+            this.addInfoTB3.Name = "addInfoTB3";
+            this.addInfoTB3.Size = new System.Drawing.Size(177, 50);
+            this.addInfoTB3.TabIndex = 19;
+            // 
+            // priceN3
+            // 
+            this.priceN3.DecimalPlaces = 2;
+            this.priceN3.Location = new System.Drawing.Point(127, 87);
+            this.priceN3.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.priceN3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.priceN3.Name = "priceN3";
+            this.priceN3.Size = new System.Drawing.Size(157, 22);
+            this.priceN3.TabIndex = 20;
+            this.priceN3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // customerCB3
+            // 
+            this.customerCB3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.customerCB3.FormattingEnabled = true;
+            this.customerCB3.Location = new System.Drawing.Point(98, 57);
+            this.customerCB3.Name = "customerCB3";
+            this.customerCB3.Size = new System.Drawing.Size(186, 24);
+            this.customerCB3.TabIndex = 22;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(16, 60);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(76, 16);
+            this.label19.TabIndex = 21;
+            this.label19.Text = "Замовник:";
+            // 
+            // projectsLV4
+            // 
+            this.projectsLV4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.projectsLV4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.projectsLV4.GridLines = true;
+            this.projectsLV4.HideSelection = false;
+            this.projectsLV4.Location = new System.Drawing.Point(10, 57);
+            this.projectsLV4.Name = "projectsLV4";
+            this.projectsLV4.Size = new System.Drawing.Size(503, 172);
+            this.projectsLV4.TabIndex = 13;
+            this.projectsLV4.UseCompatibleStateImageBehavior = false;
+            this.projectsLV4.View = System.Windows.Forms.View.Details;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.customerCB4);
+            this.groupBox6.Controls.Add(this.label20);
+            this.groupBox6.Controls.Add(this.projectsLV4);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox6.Location = new System.Drawing.Point(315, 298);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(519, 240);
+            this.groupBox6.TabIndex = 9;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Проекти замовника";
+            // 
+            // customerCB4
+            // 
+            this.customerCB4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.customerCB4.FormattingEnabled = true;
+            this.customerCB4.Location = new System.Drawing.Point(103, 27);
+            this.customerCB4.Name = "customerCB4";
+            this.customerCB4.Size = new System.Drawing.Size(186, 24);
+            this.customerCB4.TabIndex = 24;
+            this.customerCB4.SelectedIndexChanged += new System.EventHandler(this.customerCB4_SelectedIndexChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(21, 31);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(76, 16);
+            this.label20.TabIndex = 23;
+            this.label20.Text = "Замовник:";
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Назва";
+            this.columnHeader1.Width = 100;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Цiна";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Початок";
+            this.columnHeader3.Width = 70;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Кiнець";
+            this.columnHeader4.Width = 70;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Менеджер";
+            this.columnHeader5.Width = 100;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Команда QA";
+            this.columnHeader6.Width = 80;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 450);
+            this.ClientSize = new System.Drawing.Size(846, 576);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -431,33 +714,34 @@ namespace CompanyProjects
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.priceN3)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button createCustomerB;
+        private System.Windows.Forms.TextBox emailTB2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox phoneTB2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox addressTB2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nameTB2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox emailTB1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox phoneTB1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox nameTB1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button createEmployeeB;
         private System.Windows.Forms.ComboBox positionCB1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -470,6 +754,34 @@ namespace CompanyProjects
         private System.Windows.Forms.ComboBox teamCB1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button addTesterToTeamB;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.DateTimePicker termStartD3;
+        private System.Windows.Forms.ComboBox managerCB3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox nameTB3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button createProjectB;
+        private System.Windows.Forms.TextBox addInfoTB3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DateTimePicker termEndD3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox teamCB3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown priceN3;
+        private System.Windows.Forms.ComboBox customerCB3;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ListView projectsLV4;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ComboBox customerCB4;
+        private System.Windows.Forms.Label label20;
     }
 }
 
