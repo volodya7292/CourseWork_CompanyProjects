@@ -15,6 +15,6 @@ namespace CompanyProjects
         public string term_end;
         public string info;
         public Employee manager;
-        public long qa_team_id;
+        public string qa_team;
     }
 }

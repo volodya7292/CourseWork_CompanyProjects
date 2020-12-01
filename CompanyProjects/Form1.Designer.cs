@@ -50,6 +50,8 @@ namespace CompanyProjects
             this.label12 = new System.Windows.Forms.Label();
             this.createEmployeeB = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.teamNameTB1 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.teamLeadCB1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.createTeamB = new System.Windows.Forms.Button();
@@ -60,6 +62,16 @@ namespace CompanyProjects
             this.label14 = new System.Windows.Forms.Label();
             this.addTesterToTeamB = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.customerCB3 = new System.Windows.Forms.ComboBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.priceN3 = new System.Windows.Forms.NumericUpDown();
+            this.addInfoTB3 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.termEndD3 = new System.Windows.Forms.DateTimePicker();
+            this.label17 = new System.Windows.Forms.Label();
+            this.teamCB3 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.termStartD3 = new System.Windows.Forms.DateTimePicker();
             this.managerCB3 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,26 +79,30 @@ namespace CompanyProjects
             this.nameTB3 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.createProjectB = new System.Windows.Forms.Button();
-            this.termStartD3 = new System.Windows.Forms.DateTimePicker();
-            this.teamCB3 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.termEndD3 = new System.Windows.Forms.DateTimePicker();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.addInfoTB3 = new System.Windows.Forms.TextBox();
-            this.priceN3 = new System.Windows.Forms.NumericUpDown();
-            this.customerCB3 = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
             this.projectsLV4 = new System.Windows.Forms.ListView();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.customerCB4 = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.customerCB4 = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.testersLV5 = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.projectsLV5 = new System.Windows.Forms.ListView();
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label23 = new System.Windows.Forms.Label();
+            this.testersLV4 = new System.Windows.Forms.ListView();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -94,6 +110,7 @@ namespace CompanyProjects
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.priceN3)).BeginInit();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -108,7 +125,7 @@ namespace CompanyProjects
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.createCustomerB);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(270, 12);
+            this.groupBox1.Location = new System.Drawing.Point(868, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(236, 181);
             this.groupBox1.TabIndex = 5;
@@ -303,22 +320,42 @@ namespace CompanyProjects
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.teamNameTB1);
+            this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Controls.Add(this.teamLeadCB1);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.createTeamB);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox3.Location = new System.Drawing.Point(512, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(208, 123);
+            this.groupBox3.Size = new System.Drawing.Size(251, 147);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Створити команду QA";
+            // 
+            // teamNameTB1
+            // 
+            this.teamNameTB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.teamNameTB1.Location = new System.Drawing.Point(74, 21);
+            this.teamNameTB1.Name = "teamNameTB1";
+            this.teamNameTB1.Size = new System.Drawing.Size(165, 22);
+            this.teamNameTB1.TabIndex = 24;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(15, 24);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(53, 16);
+            this.label21.TabIndex = 23;
+            this.label21.Text = "Назва:";
             // 
             // teamLeadCB1
             // 
             this.teamLeadCB1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.teamLeadCB1.FormattingEnabled = true;
-            this.teamLeadCB1.Location = new System.Drawing.Point(9, 52);
+            this.teamLeadCB1.Location = new System.Drawing.Point(17, 72);
             this.teamLeadCB1.Name = "teamLeadCB1";
             this.teamLeadCB1.Size = new System.Drawing.Size(186, 24);
             this.teamLeadCB1.TabIndex = 10;
@@ -327,7 +364,7 @@ namespace CompanyProjects
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(7, 29);
+            this.label3.Location = new System.Drawing.Point(15, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 16);
             this.label3.TabIndex = 9;
@@ -336,7 +373,7 @@ namespace CompanyProjects
             // createTeamB
             // 
             this.createTeamB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.createTeamB.Location = new System.Drawing.Point(117, 88);
+            this.createTeamB.Location = new System.Drawing.Point(154, 109);
             this.createTeamB.Name = "createTeamB";
             this.createTeamB.Size = new System.Drawing.Size(85, 23);
             this.createTeamB.TabIndex = 0;
@@ -352,7 +389,7 @@ namespace CompanyProjects
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.addTesterToTeamB);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox4.Location = new System.Drawing.Point(512, 141);
+            this.groupBox4.Location = new System.Drawing.Point(272, 8);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(251, 151);
             this.groupBox4.TabIndex = 12;
@@ -436,6 +473,111 @@ namespace CompanyProjects
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Створити проект";
             // 
+            // customerCB3
+            // 
+            this.customerCB3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.customerCB3.FormattingEnabled = true;
+            this.customerCB3.Location = new System.Drawing.Point(98, 57);
+            this.customerCB3.Name = "customerCB3";
+            this.customerCB3.Size = new System.Drawing.Size(186, 24);
+            this.customerCB3.TabIndex = 22;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label19.Location = new System.Drawing.Point(16, 60);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(76, 16);
+            this.label19.TabIndex = 21;
+            this.label19.Text = "Замовник:";
+            // 
+            // priceN3
+            // 
+            this.priceN3.DecimalPlaces = 2;
+            this.priceN3.Location = new System.Drawing.Point(127, 87);
+            this.priceN3.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
+            this.priceN3.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.priceN3.Name = "priceN3";
+            this.priceN3.Size = new System.Drawing.Size(157, 22);
+            this.priceN3.TabIndex = 20;
+            this.priceN3.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // addInfoTB3
+            // 
+            this.addInfoTB3.Location = new System.Drawing.Point(107, 171);
+            this.addInfoTB3.Multiline = true;
+            this.addInfoTB3.Name = "addInfoTB3";
+            this.addInfoTB3.Size = new System.Drawing.Size(177, 50);
+            this.addInfoTB3.TabIndex = 19;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(16, 173);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(72, 16);
+            this.label18.TabIndex = 18;
+            this.label18.Text = "Доп. iнфо:";
+            // 
+            // termEndD3
+            // 
+            this.termEndD3.Location = new System.Drawing.Point(127, 143);
+            this.termEndD3.Name = "termEndD3";
+            this.termEndD3.Size = new System.Drawing.Size(157, 22);
+            this.termEndD3.TabIndex = 17;
+            this.termEndD3.Value = new System.DateTime(2020, 11, 28, 0, 0, 0, 0);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.Location = new System.Drawing.Point(16, 146);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 16);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Кiнець:";
+            // 
+            // teamCB3
+            // 
+            this.teamCB3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.teamCB3.FormattingEnabled = true;
+            this.teamCB3.Location = new System.Drawing.Point(112, 257);
+            this.teamCB3.Name = "teamCB3";
+            this.teamCB3.Size = new System.Drawing.Size(172, 24);
+            this.teamCB3.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(16, 260);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 16);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Команда QA:";
+            // 
+            // termStartD3
+            // 
+            this.termStartD3.Location = new System.Drawing.Point(127, 115);
+            this.termStartD3.Name = "termStartD3";
+            this.termStartD3.Size = new System.Drawing.Size(157, 22);
+            this.termStartD3.TabIndex = 13;
+            this.termStartD3.Value = new System.DateTime(2020, 11, 28, 0, 0, 0, 0);
+            // 
             // managerCB3
             // 
             this.managerCB3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -504,111 +646,6 @@ namespace CompanyProjects
             this.createProjectB.UseVisualStyleBackColor = true;
             this.createProjectB.Click += new System.EventHandler(this.createProjectB_Click);
             // 
-            // termStartD3
-            // 
-            this.termStartD3.Location = new System.Drawing.Point(127, 115);
-            this.termStartD3.Name = "termStartD3";
-            this.termStartD3.Size = new System.Drawing.Size(157, 22);
-            this.termStartD3.TabIndex = 13;
-            this.termStartD3.Value = new System.DateTime(2020, 11, 28, 0, 0, 0, 0);
-            // 
-            // teamCB3
-            // 
-            this.teamCB3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.teamCB3.FormattingEnabled = true;
-            this.teamCB3.Location = new System.Drawing.Point(112, 257);
-            this.teamCB3.Name = "teamCB3";
-            this.teamCB3.Size = new System.Drawing.Size(172, 24);
-            this.teamCB3.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(16, 260);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 16);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Команда QA:";
-            // 
-            // termEndD3
-            // 
-            this.termEndD3.Location = new System.Drawing.Point(127, 143);
-            this.termEndD3.Name = "termEndD3";
-            this.termEndD3.Size = new System.Drawing.Size(157, 22);
-            this.termEndD3.TabIndex = 17;
-            this.termEndD3.Value = new System.DateTime(2020, 11, 28, 0, 0, 0, 0);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(16, 146);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 16);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "Кiнець:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label18.Location = new System.Drawing.Point(16, 173);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(72, 16);
-            this.label18.TabIndex = 18;
-            this.label18.Text = "Доп. iнфо:";
-            // 
-            // addInfoTB3
-            // 
-            this.addInfoTB3.Location = new System.Drawing.Point(107, 171);
-            this.addInfoTB3.Multiline = true;
-            this.addInfoTB3.Name = "addInfoTB3";
-            this.addInfoTB3.Size = new System.Drawing.Size(177, 50);
-            this.addInfoTB3.TabIndex = 19;
-            // 
-            // priceN3
-            // 
-            this.priceN3.DecimalPlaces = 2;
-            this.priceN3.Location = new System.Drawing.Point(127, 87);
-            this.priceN3.Maximum = new decimal(new int[] {
-            999999,
-            0,
-            0,
-            0});
-            this.priceN3.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.priceN3.Name = "priceN3";
-            this.priceN3.Size = new System.Drawing.Size(157, 22);
-            this.priceN3.TabIndex = 20;
-            this.priceN3.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // customerCB3
-            // 
-            this.customerCB3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.customerCB3.FormattingEnabled = true;
-            this.customerCB3.Location = new System.Drawing.Point(98, 57);
-            this.customerCB3.Name = "customerCB3";
-            this.customerCB3.Size = new System.Drawing.Size(186, 24);
-            this.customerCB3.TabIndex = 22;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label19.Location = new System.Drawing.Point(16, 60);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(76, 16);
-            this.label19.TabIndex = 21;
-            this.label19.Text = "Замовник:";
-            // 
             // projectsLV4
             // 
             this.projectsLV4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -623,43 +660,11 @@ namespace CompanyProjects
             this.projectsLV4.HideSelection = false;
             this.projectsLV4.Location = new System.Drawing.Point(10, 57);
             this.projectsLV4.Name = "projectsLV4";
-            this.projectsLV4.Size = new System.Drawing.Size(503, 172);
+            this.projectsLV4.Size = new System.Drawing.Size(503, 118);
             this.projectsLV4.TabIndex = 13;
             this.projectsLV4.UseCompatibleStateImageBehavior = false;
             this.projectsLV4.View = System.Windows.Forms.View.Details;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.customerCB4);
-            this.groupBox6.Controls.Add(this.label20);
-            this.groupBox6.Controls.Add(this.projectsLV4);
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox6.Location = new System.Drawing.Point(315, 298);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(519, 240);
-            this.groupBox6.TabIndex = 9;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Проекти замовника";
-            // 
-            // customerCB4
-            // 
-            this.customerCB4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.customerCB4.FormattingEnabled = true;
-            this.customerCB4.Location = new System.Drawing.Point(103, 27);
-            this.customerCB4.Name = "customerCB4";
-            this.customerCB4.Size = new System.Drawing.Size(186, 24);
-            this.customerCB4.TabIndex = 24;
-            this.customerCB4.SelectedIndexChanged += new System.EventHandler(this.customerCB4_SelectedIndexChanged);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(21, 31);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(76, 16);
-            this.label20.TabIndex = 23;
-            this.label20.Text = "Замовник:";
+            this.projectsLV4.SelectedIndexChanged += new System.EventHandler(this.projectsLV4_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -690,11 +695,165 @@ namespace CompanyProjects
             this.columnHeader6.Text = "Команда QA";
             this.columnHeader6.Width = 80;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.testersLV4);
+            this.groupBox6.Controls.Add(this.label23);
+            this.groupBox6.Controls.Add(this.customerCB4);
+            this.groupBox6.Controls.Add(this.label20);
+            this.groupBox6.Controls.Add(this.projectsLV4);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox6.Location = new System.Drawing.Point(315, 166);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(816, 185);
+            this.groupBox6.TabIndex = 9;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Проекти замовника";
+            // 
+            // customerCB4
+            // 
+            this.customerCB4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.customerCB4.FormattingEnabled = true;
+            this.customerCB4.Location = new System.Drawing.Point(103, 27);
+            this.customerCB4.Name = "customerCB4";
+            this.customerCB4.Size = new System.Drawing.Size(186, 24);
+            this.customerCB4.TabIndex = 24;
+            this.customerCB4.SelectedIndexChanged += new System.EventHandler(this.customerCB4_SelectedIndexChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label20.Location = new System.Drawing.Point(21, 31);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(76, 16);
+            this.label20.TabIndex = 23;
+            this.label20.Text = "Замовник:";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label22);
+            this.groupBox7.Controls.Add(this.testersLV5);
+            this.groupBox7.Controls.Add(this.projectsLV5);
+            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox7.Location = new System.Drawing.Point(315, 356);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(816, 205);
+            this.groupBox7.TabIndex = 25;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Тестувальники";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(302, 23);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(169, 16);
+            this.label22.TabIndex = 14;
+            this.label22.Text = "Проекти тестувальника:";
+            // 
+            // testersLV5
+            // 
+            this.testersLV5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7});
+            this.testersLV5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.testersLV5.GridLines = true;
+            this.testersLV5.HideSelection = false;
+            this.testersLV5.Location = new System.Drawing.Point(10, 21);
+            this.testersLV5.Name = "testersLV5";
+            this.testersLV5.Size = new System.Drawing.Size(286, 171);
+            this.testersLV5.TabIndex = 13;
+            this.testersLV5.UseCompatibleStateImageBehavior = false;
+            this.testersLV5.View = System.Windows.Forms.View.Details;
+            this.testersLV5.SelectedIndexChanged += new System.EventHandler(this.testersLV5_SelectedIndexChanged);
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Iм\'я";
+            this.columnHeader7.Width = 249;
+            // 
+            // projectsLV5
+            // 
+            this.projectsLV5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader13,
+            this.columnHeader14,
+            this.columnHeader15,
+            this.columnHeader16,
+            this.columnHeader17,
+            this.columnHeader18});
+            this.projectsLV5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.projectsLV5.GridLines = true;
+            this.projectsLV5.HideSelection = false;
+            this.projectsLV5.Location = new System.Drawing.Point(302, 42);
+            this.projectsLV5.Name = "projectsLV5";
+            this.projectsLV5.Size = new System.Drawing.Size(503, 150);
+            this.projectsLV5.TabIndex = 13;
+            this.projectsLV5.UseCompatibleStateImageBehavior = false;
+            this.projectsLV5.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader13
+            // 
+            this.columnHeader13.Text = "Назва";
+            this.columnHeader13.Width = 100;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "Цiна";
+            // 
+            // columnHeader15
+            // 
+            this.columnHeader15.Text = "Початок";
+            this.columnHeader15.Width = 70;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Кiнець";
+            this.columnHeader16.Width = 70;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Менеджер";
+            this.columnHeader17.Width = 100;
+            // 
+            // columnHeader18
+            // 
+            this.columnHeader18.Text = "Команда QA";
+            this.columnHeader18.Width = 80;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(524, 27);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(166, 16);
+            this.label23.TabIndex = 25;
+            this.label23.Text = "Тестувальники проекту";
+            // 
+            // testersLV4
+            // 
+            this.testersLV4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader8});
+            this.testersLV4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.testersLV4.GridLines = true;
+            this.testersLV4.HideSelection = false;
+            this.testersLV4.Location = new System.Drawing.Point(524, 46);
+            this.testersLV4.Name = "testersLV4";
+            this.testersLV4.Size = new System.Drawing.Size(286, 130);
+            this.testersLV4.TabIndex = 26;
+            this.testersLV4.UseCompatibleStateImageBehavior = false;
+            this.testersLV4.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Iм\'я";
+            this.columnHeader8.Width = 249;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 576);
+            this.ClientSize = new System.Drawing.Size(1145, 574);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -719,6 +878,8 @@ namespace CompanyProjects
             ((System.ComponentModel.ISupportInitialize)(this.priceN3)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -782,6 +943,22 @@ namespace CompanyProjects
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.ComboBox customerCB4;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox teamNameTB1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.ListView testersLV5;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ListView projectsLV5;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ColumnHeader columnHeader18;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ListView testersLV4;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }
 

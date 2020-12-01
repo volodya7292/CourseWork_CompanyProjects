@@ -8,13 +8,13 @@ namespace CompanyProjects
 {
     class QATeam
     {
-        public long id;
+        public string name;
         public Employee team_lead;
         public Employee[] engineers;
 
         public override string ToString()
         {
-            return id.ToString();
+            return name;
         }
     }
 }
