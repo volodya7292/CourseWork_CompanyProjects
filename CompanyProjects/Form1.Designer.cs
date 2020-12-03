@@ -87,12 +87,17 @@ namespace CompanyProjects
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.testersLV4 = new System.Windows.Forms.ListView();
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label23 = new System.Windows.Forms.Label();
             this.customerCB4 = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.testersLV5 = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.projectsLV5 = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -100,9 +105,6 @@ namespace CompanyProjects
             this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label23 = new System.Windows.Forms.Label();
-            this.testersLV4 = new System.Windows.Forms.ListView();
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -125,9 +127,9 @@ namespace CompanyProjects
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.createCustomerB);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(868, 8);
+            this.groupBox1.Location = new System.Drawing.Point(792, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(236, 181);
+            this.groupBox1.Size = new System.Drawing.Size(236, 177);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Створити замовника";
@@ -326,7 +328,7 @@ namespace CompanyProjects
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.createTeamB);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(512, 12);
+            this.groupBox3.Location = new System.Drawing.Point(535, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(251, 147);
             this.groupBox3.TabIndex = 11;
@@ -703,12 +705,46 @@ namespace CompanyProjects
             this.groupBox6.Controls.Add(this.label20);
             this.groupBox6.Controls.Add(this.projectsLV4);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox6.Location = new System.Drawing.Point(315, 166);
+            this.groupBox6.Location = new System.Drawing.Point(315, 188);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(816, 185);
             this.groupBox6.TabIndex = 9;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Проекти замовника";
+            // 
+            // testersLV4
+            // 
+            this.testersLV4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader8,
+            this.columnHeader10});
+            this.testersLV4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.testersLV4.GridLines = true;
+            this.testersLV4.HideSelection = false;
+            this.testersLV4.Location = new System.Drawing.Point(524, 46);
+            this.testersLV4.Name = "testersLV4";
+            this.testersLV4.Size = new System.Drawing.Size(286, 130);
+            this.testersLV4.TabIndex = 26;
+            this.testersLV4.UseCompatibleStateImageBehavior = false;
+            this.testersLV4.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Iм\'я";
+            this.columnHeader8.Width = 172;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Посада";
+            this.columnHeader10.Width = 110;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(524, 27);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(141, 16);
+            this.label23.TabIndex = 25;
+            this.label23.Text = "Працiвники проекту";
             // 
             // customerCB4
             // 
@@ -736,26 +772,27 @@ namespace CompanyProjects
             this.groupBox7.Controls.Add(this.testersLV5);
             this.groupBox7.Controls.Add(this.projectsLV5);
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox7.Location = new System.Drawing.Point(315, 356);
+            this.groupBox7.Location = new System.Drawing.Point(315, 378);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(816, 205);
             this.groupBox7.TabIndex = 25;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Тестувальники";
+            this.groupBox7.Text = "Працiвники";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(302, 23);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(169, 16);
+            this.label22.Size = new System.Drawing.Size(144, 16);
             this.label22.TabIndex = 14;
-            this.label22.Text = "Проекти тестувальника:";
+            this.label22.Text = "Проекти працiвника:";
             // 
             // testersLV5
             // 
             this.testersLV5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader7});
+            this.columnHeader7,
+            this.columnHeader9});
             this.testersLV5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.testersLV5.GridLines = true;
             this.testersLV5.HideSelection = false;
@@ -770,7 +807,12 @@ namespace CompanyProjects
             // columnHeader7
             // 
             this.columnHeader7.Text = "Iм\'я";
-            this.columnHeader7.Width = 249;
+            this.columnHeader7.Width = 170;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Посада";
+            this.columnHeader9.Width = 110;
             // 
             // projectsLV5
             // 
@@ -812,47 +854,19 @@ namespace CompanyProjects
             // 
             // columnHeader17
             // 
-            this.columnHeader17.Text = "Менеджер";
-            this.columnHeader17.Width = 100;
+            this.columnHeader17.Text = "Посада в проектi";
+            this.columnHeader17.Width = 110;
             // 
             // columnHeader18
             // 
             this.columnHeader18.Text = "Команда QA";
             this.columnHeader18.Width = 80;
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(524, 27);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(166, 16);
-            this.label23.TabIndex = 25;
-            this.label23.Text = "Тестувальники проекту";
-            // 
-            // testersLV4
-            // 
-            this.testersLV4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader8});
-            this.testersLV4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.testersLV4.GridLines = true;
-            this.testersLV4.HideSelection = false;
-            this.testersLV4.Location = new System.Drawing.Point(524, 46);
-            this.testersLV4.Name = "testersLV4";
-            this.testersLV4.Size = new System.Drawing.Size(286, 130);
-            this.testersLV4.TabIndex = 26;
-            this.testersLV4.UseCompatibleStateImageBehavior = false;
-            this.testersLV4.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Iм\'я";
-            this.columnHeader8.Width = 249;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 574);
+            this.ClientSize = new System.Drawing.Size(1145, 596);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -959,6 +973,8 @@ namespace CompanyProjects
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ListView testersLV4;
         private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
     }
 }
 

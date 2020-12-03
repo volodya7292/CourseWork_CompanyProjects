@@ -77,6 +77,7 @@ namespace CompanyProjects
             {
                 ListViewItem item = new ListViewItem(employee.name);
                 item.Tag = employee;
+                item.SubItems.Add(employee.position.name);
                 testersLV5.Items.Add(item);
             }
             if (engineers.Length > 0)
@@ -232,6 +233,46 @@ namespace CompanyProjects
             }
 
             return teams.ToArray();
+        }
+
+        private QATeam QueryQATeam(string name)
+        {
+            QATeam team = null;
+
+            using (DbDataReader reader = CreateCommand(conn0, "SELECT * FROM qa_team WHERE qa_team.name = '" + name + "'").ExecuteReader())
+            {
+                if (reader.HasRows && reader.Read())
+                {
+                    team = new QATeam
+                    {
+                        name = reader.GetString(reader.GetOrdinal("name")),
+                        team_lead = QueryEmployee(reader.GetInt64(reader.GetOrdinal("team_lead")))
+                    };
+
+                    List<Employee> engineers = new List<Employee>();
+
+                    using (DbDataReader reader2 = CreateCommand(conn1, "SELECT employee.* FROM qa_team_engineer, employee " +
+                        "WHERE employee.id = qa_team_engineer.qa_engineer AND qa_team_engineer.qa_team = '" + team.name + "'").ExecuteReader())
+                    {
+                        while (reader2.HasRows && reader2.Read())
+                        {
+                            Employee engineer = new Employee
+                            {
+                                id = reader2.GetInt64(reader2.GetOrdinal("id")),
+                                name = reader2.GetString(reader2.GetOrdinal("name")),
+                                phone = reader2.GetString(reader2.GetOrdinal("phone")),
+                                email = reader2.GetString(reader2.GetOrdinal("email")),
+                                position = QueryPosition(reader2.GetInt64(reader2.GetOrdinal("position")))
+                            };
+                            engineers.Add(engineer);
+                        }
+                    }
+
+                    team.engineers = engineers.ToArray();
+                }
+            }
+
+            return team;
         }
 
         private Employee QueryEmployee(long id)
@@ -402,12 +443,12 @@ namespace CompanyProjects
             return engineers.ToArray();
         }
 
-        private Project[] QueryEngineerProjects(long engineer_id)
+        private Project[] QueryEngineerProjects(long employee_id)
         {
             List<Project> projects = new List<Project>();
 
             using (DbDataReader reader = CreateCommand(conn0, "SELECT project.* FROM project, qa_team, qa_team_engineer WHERE " +
-                "project.qa_team = qa_team.name AND qa_team_engineer.qa_team = qa_team.name AND qa_team_engineer.qa_engineer = " + engineer_id).ExecuteReader())
+                "project.qa_team = qa_team.name AND qa_team_engineer.qa_team = qa_team.name AND qa_team_engineer.qa_engineer = " + employee_id).ExecuteReader())
             {
                 while (reader.HasRows && reader.Read())
                 {
@@ -429,6 +470,59 @@ namespace CompanyProjects
             return projects.ToArray();
         }
 
+        private Project[] QueryTeamLeadProjects(long employee_id)
+        {
+            List<Project> projects = new List<Project>();
+
+            using (DbDataReader reader = CreateCommand(conn0, "SELECT project.* FROM employee, project, qa_team WHERE " +
+                "qa_team.team_lead = employee.id AND project.qa_team = qa_team.name AND employee.id = " + employee_id).ExecuteReader())
+            {
+                while (reader.HasRows && reader.Read())
+                {
+                    Project project = new Project
+                    {
+                        id = reader.GetInt64(reader.GetOrdinal("id")),
+                        name = reader.GetString(reader.GetOrdinal("name")),
+                        price = reader.GetDecimal(reader.GetOrdinal("price")),
+                        term_start = reader.GetString(reader.GetOrdinal("term_start")),
+                        term_end = reader.GetString(reader.GetOrdinal("term_end")),
+                        info = reader.GetString(reader.GetOrdinal("info")),
+                        manager = QueryEmployee(reader.GetInt64(reader.GetOrdinal("manager"))),
+                        qa_team = reader.GetString(reader.GetOrdinal("qa_team"))
+                    };
+                    projects.Add(project);
+                }
+            }
+
+            return projects.ToArray();
+        }
+
+        private Project[] QueryManagerProjects(long employee_id)
+        {
+            List<Project> projects = new List<Project>();
+
+            using (DbDataReader reader = CreateCommand(conn0, "SELECT project.* FROM employee, project WHERE " +
+                "employee.id = project.manager AND project.manager = " + employee_id).ExecuteReader())
+            {
+                while (reader.HasRows && reader.Read())
+                {
+                    Project project = new Project
+                    {
+                        id = reader.GetInt64(reader.GetOrdinal("id")),
+                        name = reader.GetString(reader.GetOrdinal("name")),
+                        price = reader.GetDecimal(reader.GetOrdinal("price")),
+                        term_start = reader.GetString(reader.GetOrdinal("term_start")),
+                        term_end = reader.GetString(reader.GetOrdinal("term_end")),
+                        info = reader.GetString(reader.GetOrdinal("info")),
+                        manager = QueryEmployee(reader.GetInt64(reader.GetOrdinal("manager"))),
+                        qa_team = reader.GetString(reader.GetOrdinal("qa_team"))
+                    };
+                    projects.Add(project);
+                }
+            }
+
+            return projects.ToArray();
+        }
 
         private Employee[] QueryProjectManagers()
         {
@@ -442,47 +536,80 @@ namespace CompanyProjects
 
         private void customerCB4_SelectedIndexChanged(object sender, EventArgs e)
         {
+            testersLV4.Items.Clear();
             updateProjects();
         }
 
-        private void updateTestersLV4()
+        private void updateWorkersLV4()
         {
             testersLV4.Items.Clear();
 
             if (projectsLV4.SelectedItems.Count > 0)
             {
-                Employee[] engineers = QueryProjectEngineers(((Project)projectsLV4.SelectedItems[0].Tag).id);
+                Project project = (Project)projectsLV4.SelectedItems[0].Tag;
+                Employee[] employees = QueryProjectEngineers(project.id);
 
                 testersLV4.Items.Clear();
 
-                foreach (Employee employee in engineers)
+                foreach (Employee employee in employees)
                 {
                     ListViewItem item = new ListViewItem(employee.name);
+                    item.SubItems.Add(employee.position.name);
                     testersLV4.Items.Add(item);
                 }
+
+                Employee team_lead = QueryQATeam(project.qa_team).team_lead;
+                ListViewItem item1 = new ListViewItem(team_lead.name);
+                item1.SubItems.Add("Керiвник команди");
+                testersLV4.Items.Add(item1);
+
+                Employee manager = project.manager;
+                ListViewItem item2 = new ListViewItem(manager.name);
+                item2.SubItems.Add("Менеджер проекту");
+                testersLV4.Items.Add(item2);
             }
         }
 
         private void projectsLV4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updateTestersLV4();
+            updateWorkersLV4();
         }
 
-        private void updateTestersLV5()
+        private void updateWorkersLV5()
         {
             projectsLV5.Items.Clear();
 
             if (testersLV5.SelectedItems.Count > 0)
             {
-                Project[] projects = QueryEngineerProjects(((Employee)testersLV5.SelectedItems[0].Tag).id);
+                long employee_id = ((Employee)testersLV5.SelectedItems[0].Tag).id;
 
-                foreach (Project project in projects)
+                foreach (Project project in QueryEngineerProjects(employee_id))
                 {
                     ListViewItem item = new ListViewItem(project.name);
                     item.SubItems.Add(project.price.ToString());
                     item.SubItems.Add(project.term_start.ToString());
                     item.SubItems.Add(project.term_end.ToString());
-                    item.SubItems.Add(project.manager.name);
+                    item.SubItems.Add("Тестувальник");
+                    item.SubItems.Add(project.qa_team);
+                    projectsLV5.Items.Add(item);
+                }
+                foreach (Project project in QueryTeamLeadProjects(employee_id))
+                {
+                    ListViewItem item = new ListViewItem(project.name);
+                    item.SubItems.Add(project.price.ToString());
+                    item.SubItems.Add(project.term_start.ToString());
+                    item.SubItems.Add(project.term_end.ToString());
+                    item.SubItems.Add("Керiвник команди");
+                    item.SubItems.Add(project.qa_team);
+                    projectsLV5.Items.Add(item);
+                }
+                foreach (Project project in QueryManagerProjects(employee_id))
+                {
+                    ListViewItem item = new ListViewItem(project.name);
+                    item.SubItems.Add(project.price.ToString());
+                    item.SubItems.Add(project.term_start.ToString());
+                    item.SubItems.Add(project.term_end.ToString());
+                    item.SubItems.Add("Менеджер проекту");
                     item.SubItems.Add(project.qa_team);
                     projectsLV5.Items.Add(item);
                 }
@@ -491,7 +618,7 @@ namespace CompanyProjects
 
         private void testersLV5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            updateTestersLV5();
+            updateWorkersLV5();
         }
 
         private void createEmployeeB_Click(object sender, EventArgs e)
@@ -558,7 +685,7 @@ namespace CompanyProjects
             addInfoTB3.Clear();
 
             updateProjects();
-            updateTestersLV5();
+            updateWorkersLV5();
         }
 
         private void addTesterToTeamB_Click(object sender, EventArgs e)
@@ -569,7 +696,7 @@ namespace CompanyProjects
             CreateCommand(conn0, "INSERT INTO qa_team_engineer (qa_team, qa_engineer) VALUES('" + team + "'," + engineer_id + ")").ExecuteNonQuery();
 
             updateTeamUnassignedEngineers();
-            updateTestersLV4();
+            updateWorkersLV4();
         }
     }
 }
