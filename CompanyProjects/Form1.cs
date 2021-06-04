@@ -80,9 +80,6 @@ namespace CompanyProjects
                 item.SubItems.Add(employee.position.name);
                 testersLV5.Items.Add(item);
             }
-            if (engineers.Length > 0)
-                testerCB1.SelectedIndex = 0;
-
         }
 
         private void updateTeamLeads()
